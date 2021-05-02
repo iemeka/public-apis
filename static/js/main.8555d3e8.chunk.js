@@ -1,2 +1,0 @@
-(this["webpackJsonppuplic-apis"]=this["webpackJsonppuplic-apis"]||[]).push([[0],{11:function(e,c,n){"use strict";n.r(c);var t=n(1),s=n.n(t),i=n(3),p=n.n(i),r=(n(8),n(9),n(0));var a=function(){return Object(r.jsx)("div",{className:"App",children:Object(r.jsx)("header",{className:"App-header",children:"Hello"})})};p.a.render(Object(r.jsx)(s.a.StrictMode,{children:Object(r.jsx)(a,{})}),document.getElementById("root"))},8:function(e,c,n){},9:function(e,c,n){}},[[11,1,2]]]);
-//# sourceMappingURL=main.8555d3e8.chunk.js.map
