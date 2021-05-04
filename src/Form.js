@@ -15,8 +15,7 @@ export default function Form() {
   ]);
 
   async function requestResults() {
-    const firstWord = category.split(" ")[0];
-    const endPoint = `https://api.publicapis.org/entries?category=${firstWord}&https=${https}`;
+    const endPoint = `https://api.publicapis.org/entries?category=${category}&https=${https}`;
     const results = await fetch(endPoint);
     const { entries } = await results.json();
     setSearchResults(entries || []);
