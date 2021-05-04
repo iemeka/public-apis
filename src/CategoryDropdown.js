@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
-import { CategoryContext } from "./CategoryContex";
+import { searchContext } from "./search/searchContext";
 
-export default function Category() {
-  const onChange = (e) => setCategory(e.target.value);
-  const { categories, category, setCategory } = useContext(CategoryContext);
+export default function CategoryDropdown() {
+  const onChange = (e) => setCategory(e.target.value || null);
+  const { categories, setCategory } = useContext(searchContext);
 
   return (
     <label htmlFor="categories">
-      "categories"
+      categories
       <select id="categories" onChange={onChange}>
-        <option>select</option>
+        <option value="">All</option>
         {categories.map((item) => (
           <option key={item} value={item}>
             {item}

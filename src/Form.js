@@ -1,35 +1,32 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState } from "react";
 import Results from "./Results";
 import useDropdown from "./useDropdown";
-import { CategoryContext } from "./category/CategoryContex";
-import Category from "./category/Category";
 
+import CategoryDropdown from "./CategoryDropdown";
+import { useQueryResults } from "./results/resultHooks";
+
+/*
+TODO: 
+1. Move HTTPDropdown to own component
+2. Implement search
+*/
 export default function Form() {
-  const {category } = useContext(CategoryContext);
-
   const [searchResults, setSearchResults] = useState([]);
-
   const [https, HttpDropDown] = useDropdown("Https", "False", [
     "True",
     "False",
   ]);
-
-  async function requestResults() {
-    const endPoint = `https://api.publicapis.org/entries?category=${category}&https=${https}`;
-    const results = await fetch(endPoint);
-    const { entries } = await results.json();
-    setSearchResults(entries || []);
-  }
+  const queryResults = useQueryResults();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await queryResults(https);
+    setSearchResults(result);
+  };
 
   return (
     <div className="result-form">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          requestResults();
-        }}
-      >
-        <Category />
+      <form onSubmit={handleSubmit}>
+        <CategoryDropdown />
         <HttpDropDown />
         <button>Submit</button>
       </form>

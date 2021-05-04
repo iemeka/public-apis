@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 export default function useDropdown (label, defaultState, options) {
   const [state, setState] = useState(defaultState);
   const DropDown = () => (
@@ -11,7 +10,7 @@ export default function useDropdown (label, defaultState, options) {
         value={state}
         onChange={(e) => setState(e.target.value)}
       >
-        <option>select</option>
+        <option>All</option>
         {options.map((item) => (
           <option key={item} value={item}>
             {item}

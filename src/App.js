@@ -1,13 +1,13 @@
 import Form from "./Form";
 import "./App.css";
-import CategoryProvider from "./category/CategoryProvider";
+import SearchProvider from './search/SearchProvider';
 
 export default function App() {
   return (
     <div className="container">
-      <CategoryProvider>
+      <SearchProvider>
         <Form />
-      </CategoryProvider>
+      </SearchProvider>
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { CategoryContext } from "./CategoryContex";
+import { searchContext } from "./searchContext";
 
-export default function CategoryProvider({ children }) {
+export default function SearchProvider({ children }) {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState(null);
+  const [HTTPSsupport, setHTTPSsupport] = useState(null);
 
   useEffect(() => {
     const endPoint = "https://api.publicapis.org/categories";
@@ -14,11 +15,11 @@ export default function CategoryProvider({ children }) {
       });
   }, []);
 
-  const value = { categories, category, setCategory };
+  const value = { categories, category, setCategory, HTTPSsupport, setHTTPSsupport };
 
   return (
-    <CategoryContext.Provider value={value}>
+    <searchContext.Provider value={value}>
       {children}
-    </CategoryContext.Provider>
+    </searchContext.Provider>
   );
 }
