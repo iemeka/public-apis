@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Results from "./Results";
 import useDropdown from "./useDropdown";
 
-const Form = () => {
+export default function Form () {
   const [searchResults, setSearchResults] = useState([]);
   const [categories, setCategory] = useState([]);
   const [category, CategoryDropDown] = useDropdown(
@@ -47,5 +47,3 @@ const Form = () => {
     </div>
   );
 };
-
-export default Form;

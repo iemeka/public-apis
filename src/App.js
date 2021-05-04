@@ -1,7 +1,7 @@
 import Form from "./Form";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="container">
         <Form />
@@ -9,4 +9,3 @@ function App() {
   );
 }
 
-export default App;

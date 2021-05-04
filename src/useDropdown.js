@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const useDropdown = (label, defaultState, options) => {
+export default function useDropdown (label, defaultState, options) {
   const [state, setState] = useState(defaultState);
   const DropDown = () => (
     <label htmlFor={label}>
@@ -22,5 +22,3 @@ const useDropdown = (label, defaultState, options) => {
 
   return [state, DropDown, setState];
 };
-
-export default useDropdown;
