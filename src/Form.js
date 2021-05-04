@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Results from "./Results";
 import useDropdown from "./useDropdown";
+import { CategoryContext } from "./category/CategoryContex";
 
-export default function Form () {
+export default function Form() {
+  const { categories } = useContext(CategoryContext);
+
   const [searchResults, setSearchResults] = useState([]);
-  const [categories, setCategory] = useState([]);
   const [category, CategoryDropDown] = useDropdown(
     "Category",
     "Finance",
@@ -14,14 +16,6 @@ export default function Form () {
     "True",
     "False",
   ]);
-
-  useEffect(() => {
-    setCategory([]);
-    const endPoint = "https://api.publicapis.org/categories";
-    fetch(endPoint)
-      .then((response) => response.json())
-      .then((data) => setCategory(data));
-  }, []);
 
   async function requestResults() {
     const cate = category.split(" ")[0];
@@ -46,4 +40,4 @@ export default function Form () {
       <Results searchResults={searchResults} />
     </div>
   );
-};
+}
