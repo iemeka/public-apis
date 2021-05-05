@@ -5,6 +5,7 @@ export default function SearchProvider({ children }) {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState(null);
   const [HTTPSsupport, setHTTPSsupport] = useState(null);
+  const [searchBarValue, setSearchBarValue] = useState("");
 
   useEffect(() => {
     const endPoint = "https://api.publicapis.org/categories";
@@ -15,11 +16,17 @@ export default function SearchProvider({ children }) {
       });
   }, []);
 
-  const value = { categories, category, setCategory, HTTPSsupport, setHTTPSsupport };
+  const value = {
+    categories,
+    category,
+    setCategory,
+    HTTPSsupport,
+    setHTTPSsupport,
+    searchBarValue,
+    setSearchBarValue
+  };
 
   return (
-    <searchContext.Provider value={value}>
-      {children}
-    </searchContext.Provider>
+    <searchContext.Provider value={value}>{children}</searchContext.Provider>
   );
 }

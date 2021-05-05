@@ -4,6 +4,8 @@ export const searchContext = React.createContext({
   categories: [],
   category: null,
   setCategory: () => {},
-  HTTPSsupport: null, // null | true | false
+  HTTPSsupport: null,
   setHTTPSsupport: () => {},
+  searchBarValue: "",
+  setSearchBarValue: () => {},
 });
