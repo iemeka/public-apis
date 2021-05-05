@@ -1,31 +1,29 @@
 import { useCallback, useContext } from "react";
 import { searchContext } from "../search/searchContext";
 
-const BASE_URL = 'https://api.publicapis.org/entries';
+const BASE_URL = "https://api.publicapis.org/entries";
 
 export function useQueryResults() {
   const endpoint = useEndPoint();
-  return useCallback(
-    async (https) => {
-      const results = await fetch(endpoint());
-      const { entries } = await results.json();
-      return entries;
-    },
-    [endpoint]
-  );
+  return useCallback(async () => {
+    const results = await fetch(endpoint());
+    const { entries } = await results.json();
+    return entries;
+  }, [endpoint]);
 }
 
 function useEndPoint() {
-  const { category, HTTPSsupport } = useContext(searchContext);
+  const { category, HTTPSsupport, searchBarValue } = useContext(searchContext);
+  const url = searchBarValue ? `${BASE_URL}?title=${searchBarValue}&` : BASE_URL+'?';
   return useCallback(() => {
     if (category != null && HTTPSsupport != null) {
-      return `${BASE_URL}?category=${category}&https={HTTPSsupport}`;
+      return `${url}category=${category}&https=${HTTPSsupport}`;
     } else if (category != null) {
-      return `${BASE_URL}?category=${category}`;
+      return `${url}category=${category}`;
     } else if (HTTPSsupport != null) {
-      return `${BASE_URL}?https=${HTTPSsupport}`;
+      return `${url}https=${HTTPSsupport}`;
     } else {
-      return BASE_URL;
+      return url;
     }
-  }, [category, HTTPSsupport]);
+  }, [category, HTTPSsupport,url]);
 }
