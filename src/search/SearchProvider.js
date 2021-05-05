@@ -4,9 +4,8 @@ import { searchContext } from "./searchContext";
 export default function SearchProvider({ children }) {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState(null);
-  const [allHTTPS, setAllHTTPS] = useState(["true", "false"]);
   const [HTTPSsupport, setHTTPSsupport] = useState(null);
-  const [searchBarValue, setSearchBarValue] = useState(null);
+  const [searchBarValue, setSearchBarValue] = useState("");
 
   useEffect(() => {
     const endPoint = "https://api.publicapis.org/categories";
@@ -24,9 +23,7 @@ export default function SearchProvider({ children }) {
     HTTPSsupport,
     setHTTPSsupport,
     searchBarValue,
-    setSearchBarValue,
-    allHTTPS,
-    setAllHTTPS
+    setSearchBarValue
   };
 
   return (

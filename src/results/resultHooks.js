@@ -14,7 +14,7 @@ export function useQueryResults() {
 
 function useEndPoint() {
   const { category, HTTPSsupport, searchBarValue } = useContext(searchContext);
-  const url = searchBarValue ? `${BASE_URL}?title=${searchBarValue}&` : BASE_URL+'?';
+  const url = searchBarValue.length > 0 ? `${BASE_URL}?title=${searchBarValue}&` : BASE_URL+'?';
   return useCallback(() => {
     if (category != null && HTTPSsupport != null) {
       return `${url}category=${category}&https=${HTTPSsupport}`;

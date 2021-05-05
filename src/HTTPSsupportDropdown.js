@@ -2,8 +2,9 @@ import React, { useContext } from "react";
 import { searchContext } from "./search/searchContext";
 
 export default function HTTPSsupportDropdown() {
+  const { setHTTPSsupport } = useContext(searchContext);
   const onChange = (e) => setHTTPSsupport(e.target.value || null);
-  const { allHTTPS, setHTTPSsupport } = useContext(searchContext);
+  const allHTTPS = ["true", "false"];
 
   return (
     <label htmlFor="http">
