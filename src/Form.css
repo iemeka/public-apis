@@ -1,3 +1,11 @@
+.form-and-result {
+  border: 4px solid rgb(51, 153, 85);
+  margin: 1em;
+}
+
 form {
-  border: 4px solid rebeccapurple
+  border: 4px solid #663399;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
 }

@@ -1,0 +1,10 @@
+label[for=search-bar]{
+  border: 3px solid red;
+  background-color: orange;
+  width: 100%;
+}
+
+#search-bar {
+  width: 100%;
+  max-width: 60em;
+}
