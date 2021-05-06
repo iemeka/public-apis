@@ -10,4 +10,3 @@ export default function SearchBar() {
       <input id="search-bar" type="text" onChange={onChange} />
     </label>
   );
-}
