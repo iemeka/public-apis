@@ -1,5 +1,5 @@
 .header{
-  border:2px solid orange;
+  /* border:2px solid orange; */
   flex-grow: 0;
   background:#323232;
   display: flex;
@@ -56,7 +56,7 @@
 }
 
 form {
-  border: 4px solid #663399;
+  /* border: 4px solid #663399; */
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
@@ -82,7 +82,7 @@ form > *{
 }
 
 
-/* media querry for heights - green */
+
 /* media query for result search - text coming out */
 /* remove margin left of in result content when no results on display  */
 /* link should be hidden in a text */

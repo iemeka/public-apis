@@ -1,8 +1,9 @@
 import React from "react";
 import Result from "./Result";
 import "./Results.css";
+import PropTypes from "prop-types";
 
-export default function Results({ searchResults }) {
+function Results({ searchResults }) {
   return (
     <div className="result-holder">
       {searchResults ? (
@@ -22,3 +23,9 @@ export default function Results({ searchResults }) {
     </div>
   );
 }
+
+Results.propTypes = {
+  searchResults: PropTypes.array,
+};
+
+export default Results;

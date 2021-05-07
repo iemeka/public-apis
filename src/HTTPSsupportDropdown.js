@@ -25,17 +25,5 @@ export default function HTTPSsupportDropdown() {
         <label htmlFor="both">Both</label>
       </div>
     </div>
-
-    // <label htmlFor="http">
-    //   https
-    //   <select id="http" onChange={onChange}>
-    //     <option value="">All</option>
-    //     {allHTTPS.map((item) => (
-    //       <option key={item} value={item}>
-    //         {item}
-    //       </option>
-    //     ))}
-    //   </select>
-    // </label>
   );
 }

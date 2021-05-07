@@ -1,12 +1,15 @@
-label[for=search-bar]{
-  border: 3px solid red;
-  background-color: orange;
+label[for="search-bar"] {
+  border: 1px solid #b1abab;
   display: flex;
-  border-radius: 5px;
+  border-radius: 6px;
   flex: 1;
-  height:fit-content;
+  height: fit-content;
   align-items: center;
   min-width: 20em;
+  overflow:hidden; /* a cut in border by input */
+  padding-left: 5px;
+  padding-right: 3px;
+  box-shadow: 1px 1px 3px 0px  #888;
 }
 
 #search-bar {
@@ -14,4 +17,9 @@ label[for=search-bar]{
   height: 35px;
   font-family: monospace;
   font-size: 1.3em;
+  border: 0px;
+}
+
+#search-bar:focus {
+  outline: none;
 }

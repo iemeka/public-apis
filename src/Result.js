@@ -1,7 +1,8 @@
 import React from "react";
 import "./Result.css";
+import PropTypes from "prop-types";
 
-export default function Result({ title, description, link, category }) {
+function Result({ title, description, link, category }) {
   return (
     <div className="entry">
       <h3>{title}</h3>
@@ -12,3 +13,12 @@ export default function Result({ title, description, link, category }) {
     </div>
   );
 }
+
+Result.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  link: PropTypes.string,
+  category:PropTypes.string,
+};
+
+export default Result;

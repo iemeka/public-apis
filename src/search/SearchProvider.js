@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { searchContext } from "./searchContext";
+import PropTypes from "prop-types";
 
-export default function SearchProvider({ children }) {
+function SearchProvider({ children }) {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState(null);
   const [HTTPSsupport, setHTTPSsupport] = useState(null);
@@ -23,10 +24,16 @@ export default function SearchProvider({ children }) {
     HTTPSsupport,
     setHTTPSsupport,
     searchBarValue,
-    setSearchBarValue
+    setSearchBarValue,
   };
 
   return (
     <searchContext.Provider value={value}>{children}</searchContext.Provider>
   );
 }
+
+SearchProvider.propTypes = {
+  children: PropTypes.element,
+};
+
+export default SearchProvider;
