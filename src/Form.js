@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Results from "./Results";
-import HTTPSsupportDropdown from "./HTTPSsupportDropdown";
+import HTTPSsupportBtn from "./HTTPSsupportBtn";
 import SearchBar from "./SearchBar";
 import CategoryDropdown from "./CategoryDropdown";
 import { useQueryResults } from "./results/resultHooks";
@@ -22,7 +22,7 @@ export default function Form() {
         <form onSubmit={handleSubmit}>
           <SearchBar />
           <CategoryDropdown />
-          <HTTPSsupportDropdown />
+          <HTTPSsupportBtn />
           <button id="submit-btn">Submit</button>
         </form>
       </div>

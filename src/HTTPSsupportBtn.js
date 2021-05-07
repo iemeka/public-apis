@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { searchContext } from "./search/searchContext";
-import "./HTTPSsupportDropdown.css";
+import "./HTTPSsupportBtn.css";
 
-export default function HTTPSsupportDropdown() {
+export default function HTTPSsupportBtn() {
   const { setHTTPSsupport } = useContext(searchContext);
   const onClick = (e) => {
     let content = e.target.textContent;
