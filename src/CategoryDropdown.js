@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { searchContext } from "./search/searchContext";
 import "./CategoryDropdown.css";
-import { mdiArrowDown, mdiArrowUp } from "@mdi/js";
+import { mdiChevronDown, mdiChevronUp } from "@mdi/js";
 import Icon from "@mdi/react";
 
 export default function CategoryDropdown() {
@@ -17,7 +17,7 @@ export default function CategoryDropdown() {
         </span>
         <button id="category" onClick={() => setVisibility(!visibility)}>
           <Icon
-            path={visibility ? mdiArrowUp : mdiArrowDown}
+            path={visibility ? mdiChevronUp : mdiChevronDown}
             size={1}
             color="#000"
           />

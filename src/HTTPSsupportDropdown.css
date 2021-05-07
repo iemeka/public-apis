@@ -4,6 +4,7 @@
   align-items: center;
   height: fit-content;
   align-self: center;
+  font-size: 1em;
 }
 
 input[type=radio]{
@@ -12,6 +13,7 @@ input[type=radio]{
 
 .radioInputs label{
   border:2px solid black;
+  color: #666;
   cursor: pointer;
   background:pink
 }
@@ -19,4 +21,5 @@ input[type=radio]{
 .radioInputs input:checked + label {
   background-color:chartreuse;
 }
+
 
