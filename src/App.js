@@ -5,7 +5,7 @@ import SearchProvider from './search/SearchProvider';
 export default function App() {
   return (
     <div className="container">
-      <SearchProvider>
+      <SearchProvider>    
         <Form />
       </SearchProvider>
     </div>

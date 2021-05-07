@@ -3,44 +3,20 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   /* border: 3px solid rgb(220, 200, 20); */
   height: 100%;
 }
 
 body {
-  border: 0px solid #fff;
+  /* border: 0px solid #fff; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* min-height: 100%; */
-  padding: 0 2em 0 2em;
-  background-color: #ffffff;
-  background: linear-gradient(
-    170deg,
-    #fff 0%,
-    #fff 65%,
-    #2573f1 65.1%,
-    #2573f1 75%,
-    #22d09a 75.1%,
-    #22d09a 80%,
-    #313131 80.1%
-  )
-  no-repeat 100% 100% / 50% 100%,
-linear-gradient(
-    -170deg,
-    #fff 0%,
-    #fff 65%,
-    #2573f1 65.1%,
-    #2573f1 75%,
-    #22d09a 75.1%,
-    #22d09a 80%,
-    #313131 80.1%
-  )
-  no-repeat 0% 100% / 50% 100%;
+  background-color: #f9f9f9;
 }
 
 code {

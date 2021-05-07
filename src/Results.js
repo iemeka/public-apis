@@ -1,5 +1,6 @@
 import React from "react";
 import Result from "./Result";
+import "./Results.css";
 
 export default function Results({ searchResults }) {
   return (

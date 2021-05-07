@@ -17,15 +17,23 @@ export default function Form() {
   };
 
   return (
-    <div className="form-and-result">
-      <form onSubmit={handleSubmit}>
-        <SearchBar />
-        <CategoryDropdown />
-        <HTTPSsupportDropdown />
-
-        <button>Submit</button>
-      </form>
-      <Results searchResults={searchResults} />
+    <div>
+      <div className="header">
+        <form onSubmit={handleSubmit}>
+          <SearchBar />
+          <CategoryDropdown />
+          <HTTPSsupportDropdown />
+          <button id="submit-btn">Submit</button>
+        </form>
+      </div>
+      <div className="result" style={{ color: "red" }}>
+        <div className="in-result">
+          <div className="in-result-content">
+            
+            <Results searchResults={searchResults} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,10 +1,17 @@
 label[for=search-bar]{
   border: 3px solid red;
   background-color: orange;
-  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  flex: 1;
+  height:fit-content;
+  align-items: center;
+  min-width: 20em;
 }
 
 #search-bar {
   width: 100%;
-  max-width: 60em;
+  height: 35px;
+  font-family: monospace;
+  font-size: 1.3em;
 }
