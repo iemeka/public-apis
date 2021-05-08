@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Results from "./Results";
 import HTTPSsupportBtn from "./HTTPSsupportBtn";
 import SearchBar from "./SearchBar";
+import TableHead from "./TableHead";
 import CategoryDropdown from "./CategoryDropdown";
 import { useQueryResults } from "./results/resultHooks";
 import "./Form.css";
@@ -26,10 +27,11 @@ export default function Form() {
           <button id="submit-btn">Submit</button>
         </form>
       </div>
+      <TableHead />
       <div className="result" style={{ color: "red" }}>
+        
         <div className="in-result">
           <div className="in-result-content">
-            
             <Results searchResults={searchResults} />
           </div>
         </div>
@@ -37,6 +39,3 @@ export default function Form() {
     </div>
   );
 }
-
-
-
