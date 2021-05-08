@@ -1,3 +1,90 @@
-form {
-  border: 4px solid rebeccapurple
+.header{
+  /* border:2px solid orange; */
+  flex-grow: 0;
+  background:#323232;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1em;
+  padding-left: 1em;
+  height: 15vh;
+} 
+ 
+ 
+ .result {
+  border: 4px solid #339955;
+  overflow: hidden;
+  flex-grow: 1;
+  position: relative;
+  height: 83vh;
+
+
+ 
+  
+  /* display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 70em;
+  min-width: 20em;
+  margin-top: 32px; */
 }
+
+.in-result {
+  border: 2px solid magenta;
+  position: absolute;
+  top:5.23vh;
+  left:0;
+  right:0;
+  bottom: 0;
+  overflow: auto;
+  padding-right: 1em;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.in-result-content{
+  border: 2px solid rgb(45, 255, 3);
+  width: 100%;
+  max-width:60em !important;
+  margin-left: 1em;
+  position: absolute;
+  top: 1.26vh;
+}
+
+form {
+  /* border: 4px solid #663399; */
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center ;
+  align-items: center;
+  padding-left:0.5em ;
+  padding-top: 2.25vh;
+  padding-bottom: 2.25vh;
+  width: 100%;
+  max-width:60em !important;
+  position: relative;
+  top:5.1vh;
+  z-index: 1;
+}
+
+form > *{
+  margin-right: 0.5em;
+  margin-top: 1.12vh;
+}
+
+#submit-btn{
+  height: fit-content;
+}
+
+
+
+/* media query for result search - text coming out */
+/* remove margin left of in result content when no results on display  */
+/* link should be hidden in a text */
+
+/* height fixed now, use media query to adjust form elements */

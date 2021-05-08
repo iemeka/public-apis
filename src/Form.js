@@ -4,6 +4,7 @@ import HTTPSsupportDropdown from "./HTTPSsupportDropdown";
 import SearchBar from "./SearchBar";
 import CategoryDropdown from "./CategoryDropdown";
 import { useQueryResults } from "./results/resultHooks";
+import "./Form.css";
 
 export default function Form() {
   const [searchResults, setSearchResults] = useState([]);
@@ -16,14 +17,26 @@ export default function Form() {
   };
 
   return (
-    <div className="result-form">
-      <form onSubmit={handleSubmit}>
-        <CategoryDropdown />
-        <HTTPSsupportDropdown />
-        <SearchBar />
-        <button>Submit</button>
-      </form>
-      <Results searchResults={searchResults} />
+    <div>
+      <div className="header">
+        <form onSubmit={handleSubmit}>
+          <SearchBar />
+          <CategoryDropdown />
+          <HTTPSsupportDropdown />
+          <button id="submit-btn">Submit</button>
+        </form>
+      </div>
+      <div className="result" style={{ color: "red" }}>
+        <div className="in-result">
+          <div className="in-result-content">
+            
+            <Results searchResults={searchResults} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
+
+
+

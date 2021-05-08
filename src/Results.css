@@ -1,0 +1,7 @@
+.result-holder{
+  /* border: 1px solid yellow; */
+  max-width:60em !important;
+    box-shadow: 5px 0 10px -6px black,
+              -5px 0 5px -5px black ;
+  
+}

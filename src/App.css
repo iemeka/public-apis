@@ -1,15 +1,14 @@
 .container {
-  /* border: 3px solid crimson; */
-  height: 92vh;
-  max-width: 65em;
-  margin: 0 auto;
-  margin-top: 1.5em;
-  background: linear-gradient(180deg, #323232 15%, #f9f9f9 15%, #f9f9f9 70%);
+  border-top:2px solid #323232;
   background-color: #f9f9f9;
-  overflow: scroll;
-  box-shadow: 5px 0 10px -6px black,
-              -5px 0 5px -5px black ;
+  display: flex;
+  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+
 }
 
-/* linear-gradient(145deg (rotate),rgba(0,0,0,.4) 0, #313131 40%) no-repeat 100% 100% (x and y axis / 50% 
-20em, (length and breadth*/
+
+
