@@ -7,20 +7,24 @@ export default function HTTPSsupportDropdown() {
   const onClick = (e) => {
     let content = e.target.textContent;
     if (content.length > 0) {
-      console.log(content);
-      if (content === "Both") content = null;
+      if (content === "HTTPS") {
+        content = "True"
+      } else if (content === "HTTP") {
+        content = "False"
+      } else {
+        content = null
+      }
       setHTTPSsupport(content || null);
     }
   };
 
   return (
     <div className="http-switch">
-      <span>HTTPS : </span>
       <div className="radioInputs" onClick={onClick}>
         <input id="on" type="radio" name="http-radio" />
-        <label htmlFor="on">True</label>
+        <label htmlFor="on">HTTPS</label>
         <input id="off" type="radio" name="http-radio" />
-        <label htmlFor="off">False</label>
+        <label htmlFor="off">HTTP</label>
         <input id="both" type="radio" name="http-radio" />
         <label htmlFor="both">Both</label>
       </div>
