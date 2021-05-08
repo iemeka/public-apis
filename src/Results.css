@@ -1,6 +1,6 @@
 .result-holder{
-  /* border: 1px solid yellow; */
   max-width:60em !important;
+  height: 600px;
  
 }
 
@@ -13,17 +13,18 @@
 
 .in-result {
   position: absolute;
-  top: 0vh;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: auto;
   padding-right: 1em;
   padding-left: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 600px;
+  overflow-y: scroll;
 }
 
 .in-result-content {
@@ -31,5 +32,4 @@
   max-width: 60em !important;
   margin-left: 1em;
   position: absolute;
-  top: 1.26vh;
 }
