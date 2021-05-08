@@ -10,7 +10,7 @@ export default function SearchBar() {
   return (
     <label htmlFor="search-bar">
       <Icon size={1} path={mdiMagnify} color="grey" />
-      <input id="search-bar" type="text" onChange={onChange} />
+      <input id="search-bar" placeholder="Search Public APIs" type="text" onChange={onChange} />
     </label>
   );
 }

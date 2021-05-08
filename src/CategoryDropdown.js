@@ -25,16 +25,16 @@ export default function CategoryDropdown() {
       </label>
       {visibility ? (
         <div className="category-list">
-          {categories.map((item) => (
+          {[null,...categories].map((item) => (
             <div
               className="category-list-item"
-              key={item}
+              key={item ?? "all"}
               onClick={() => {
                 setCategory(item);
                 setVisibility(false);
               }}
             >
-              {item}
+              {item ?? "All"}
             </div>
           ))}
         </div>

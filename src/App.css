@@ -1,14 +1,21 @@
 .container {
-  border-top:2px solid #323232;
+  border-top: 2px solid #323232;
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-
 }
 
+footer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  padding: 20px 0;
+}
 
-
+footer a {
+  font-weight: bold;
+  font-size: 14px;
+  color: #2f3640 ;
+}
