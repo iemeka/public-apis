@@ -5,15 +5,13 @@
 }
 
 .result {
-  /* border: 4px solid #339955; */
   overflow: hidden;
   flex-grow: 1;
   position: relative;
-  height: 73vh;
+  height: 600px;
 }
 
 .in-result {
-  /* border: 2px solid magenta; */
   position: absolute;
   top: 0vh;
   left: 0;
@@ -29,7 +27,6 @@
 }
 
 .in-result-content {
-  /* border: 2px solid rgb(45, 255, 3); */
   width: 100%;
   max-width: 60em !important;
   margin-left: 1em;

@@ -5,13 +5,12 @@ import PropTypes from "prop-types";
 function Result({ title, description, link, auth, cors }) {
   return (
     <div className="table-body">
-      <span className="title">{title }</span>
-      <span className="description">
-        {description}
-      </span>
-      <span className="auth">{ auth.length > 0 ? auth : "-"}</span>
-      <span className="cors">{cors}</span>
-      <a  href ={link} className="action">visit</a>
+      <a href={link} className="title">
+        {title}
+      </a>
+      <span className="description">{description}</span>
+      <span className="auth">{auth.length > 0 ? auth : "-"}</span>
+      <span data-type={cors} className="cors">{cors}</span>
     </div>
   );
 }

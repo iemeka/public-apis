@@ -24,7 +24,7 @@ export default function Form() {
           <SearchBar />
           <CategoryDropdown />
           <HTTPSsupportBtn />
-          <button id="submit-btn">Submit</button>
+          <button id="submit-btn">Search</button>
         </form>
       </div>
       <TableHead />

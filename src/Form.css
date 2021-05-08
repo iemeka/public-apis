@@ -38,35 +38,22 @@ form > * {
 #submit-btn {
   border: 0px;
   font-size: 1em;
-  background: #cb4e4e;
+  background: #2776f6;
   color: #fff;
   font-weight: bold;
-  padding: 5px 15px;
-  box-shadow: 0px 6px 0px 0px #ab3c3c;
-  letter-spacing: 1px;
+  padding: 10px 15px;
   position: relative;
-  top: -2px;
-  text-shadow: 0 1px 0 #cb4e4e, 0 -1px 0 #6b8659;
-}
-
-#submit-btn:hover {
-  top: 1px;
-  box-shadow: 0px 3px 0px 0px #ab3c3c;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 #submit-btn:active {
-  top: 2px;
   box-shadow: 1px 1px 5px #646060;
 }
 
-/* media query for result search - text coming out */
-/* remove margin left of in result content when no results on display  */
-/* link should be hidden in a text */
 
-/* height fixed now, use media query to adjust form elements */
-
-@media only screen and (max-width:650px){
-  form{
+@media only screen and (max-width: 650px) {
+  form {
     top: 2vh;
   }
 }
