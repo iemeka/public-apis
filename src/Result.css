@@ -1,7 +1,78 @@
 *{
   margin: 0;
 }
-.entry {
+
+.table-body {
+  border-bottom: 3px solid #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background: #fff;
-  margin-bottom: 5px;
+  color: #000;
+  min-height: 50px;
+  /* padding-left: 1em;
+  padding-right: 1em; */
+  padding: 10px 1em;
+}
+
+.table-body > * {
+  /* height: 50px; */
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+}
+
+.title {
+  width: 25em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.description {
+  /* border: 1px solid black; */
+  width: 30em;
+}
+
+.auth {
+  width: 10em;
+  color: #696868
+}
+
+.cors {
+  width: 10em;
+  text-transform: capitalize;
+  color: #696868
+}
+
+.action {
+  width: 10em;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background-color: #9abb82;
+  text-shadow: 0 1px 0 #afcb9b, 0 -1px 0 #6b8659;
+  font-weight: bold;
+  height: 25px;
+  padding-top: 3px;
+  box-shadow: inset 0 3px 8px 1px rgba(0, 0, 0, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.action:hover{
+  box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.5);
+
+}
+
+/* media - hide Auth or Cors */
+@media only screen and (max-width:690px){
+  .auth{
+    display: none;
+  }
+}
+
+@media only screen and (max-width:606px){
+  .cors{
+    display: none;
+  }
 }

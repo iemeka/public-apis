@@ -13,8 +13,9 @@ function Results({ searchResults }) {
             title={entry.API}
             description={entry.Description}
             link={entry.Link}
-            category={entry.Category}
+            auth={entry.Auth}
             index={index}
+            cors={entry.Cors}
           />
         ))
       ) : (
