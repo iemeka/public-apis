@@ -8,19 +8,19 @@ export default function HTTPSsupportBtn() {
     let content = e.target.textContent;
     if (content.length > 0) {
       if (content === "HTTPS") {
-        content = "True"
+        content = "True";
       } else if (content === "HTTP") {
-        content = "False"
+        content = "False";
       } else {
-        content = null
+        content = null;
       }
-      setHTTPSsupport(content || null);
+      setHTTPSsupport(content);
     }
   };
 
   return (
     <div className="http-switch">
-      <div className="radioInputs" onClick={onClick}>
+      <div className="radioInputs" data-testid="radio-input" onClick={onClick}>
         <input id="on" type="radio" name="http-radio" />
         <label htmlFor="on">HTTPS</label>
         <input id="off" type="radio" name="http-radio" />
