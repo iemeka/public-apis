@@ -8,11 +8,11 @@ export default function HTTPSsupportBtn() {
     let content = e.target.textContent;
     if (content.length > 0) {
       if (content === "HTTPS") {
-        content = "True"
+        content = "True";
       } else if (content === "HTTP") {
-        content = "False"
+        content = "False";
       } else {
-        content = null
+        content = null;
       }
       setHTTPSsupport(content || null);
     }

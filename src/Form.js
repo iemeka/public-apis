@@ -29,7 +29,6 @@ export default function Form() {
       </div>
       <TableHead />
       <div className="result" style={{ color: "red" }}>
-        
         <div className="in-result">
           <div className="in-result-content">
             <Results searchResults={searchResults} />
