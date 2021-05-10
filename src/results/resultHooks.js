@@ -13,9 +13,9 @@ export function useQueryResults() {
   }, [category, HTTPSsupport, searchBarValue]);
 }
 
-function generateEndpoint(category, HTTPSsupport, searchBarValue) {
+export function generateEndpoint(category, HTTPSsupport, searchBarValue) {
   const url =
-    searchBarValue.length > 0
+    searchBarValue != null && searchBarValue.length > 0
       ? `${BASE_URL}?title=${searchBarValue}&`
       : BASE_URL + "?";
   if (category != null && HTTPSsupport != null) {
