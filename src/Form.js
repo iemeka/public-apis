@@ -24,10 +24,10 @@ export default function Form() {
           <SearchBar />
           <CategoryDropdown />
           <HTTPSsupportBtn />
-          <button id="submit-btn">Search</button>
+          <button data-testid="submit-btn" id="submit-btn">Search</button>
         </form>
       </div>
-      <TableHead />
+      {searchResults.length > 0 ? <TableHead /> : null}
       <div className="result" style={{ color: "red" }}>
         <div className="in-result">
           <div className="in-result-content">

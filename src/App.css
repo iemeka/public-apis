@@ -10,12 +10,13 @@ footer {
   position: absolute;
   width: 100%;
   bottom: 0;
-  padding: 20px 10px;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f9f9f9;
 }
 
 footer a {
   font-weight: bold;
   font-size: 14px;
   color: #2f3640 ;
-
 }

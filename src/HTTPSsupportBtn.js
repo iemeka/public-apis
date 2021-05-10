@@ -14,13 +14,13 @@ export default function HTTPSsupportBtn() {
       } else {
         content = null;
       }
-      setHTTPSsupport(content || null);
+      setHTTPSsupport(content);
     }
   };
 
   return (
     <div className="http-switch">
-      <div className="radioInputs" onClick={onClick}>
+      <div className="radioInputs" data-testid="radio-input" onClick={onClick}>
         <input id="on" type="radio" name="http-radio" />
         <label htmlFor="on">HTTPS</label>
         <input id="off" type="radio" name="http-radio" />
