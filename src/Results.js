@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 function Results({ searchResults }) {
   return (
     <div className="result-holder">
-      {searchResults ? (
+      {searchResults != null && searchResults.length > 0 ? (
         searchResults.map((entry, index) => (
           <Result
             key={`item-${index}`}

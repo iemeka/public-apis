@@ -15,7 +15,7 @@ export default function CategoryDropdown() {
         <span>
           {category == null || category.length < 1 ? "All" : category}
         </span>
-        <button id="category" onClick={() => setVisibility(!visibility)}>
+        <button id="category" data-testid="drop-down-btn" onClick={() => setVisibility(!visibility)}>
           <Icon
             path={visibility ? mdiChevronUp : mdiChevronDown}
             size={1}
