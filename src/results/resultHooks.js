@@ -7,9 +7,16 @@ export function useQueryResults() {
   const { category, HTTPSsupport, searchBarValue } = useContext(searchContext);
   return useCallback(async () => {
     const endpoint = generateEndpoint(category, HTTPSsupport, searchBarValue);
-    const results = await fetch(endpoint);
-    const { entries } = await results.json();
-    return entries;
+    const results = await fetch(endpoint)
+      .then((res) => res.json())
+      .catch((e) => {
+        console.log(e);
+      });
+    if (results) {
+      const { entries } = results;
+      return entries;
+    }
+    return [];
   }, [category, HTTPSsupport, searchBarValue]);
 }
 

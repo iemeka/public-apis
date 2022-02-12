@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Results from "./Results";
 import HTTPSsupportBtn from "./HTTPSsupportBtn";
 import SearchBar from "./SearchBar";
@@ -16,6 +16,13 @@ export default function Form() {
     const result = await queryResults();
     setSearchResults(result);
   };
+  useEffect(() => {
+    async function fetchData() {
+      const response = await queryResults();
+      setSearchResults(response);
+    }
+    fetchData();
+  }, [queryResults]);
 
   return (
     <div>
@@ -24,17 +31,23 @@ export default function Form() {
           <SearchBar />
           <CategoryDropdown />
           <HTTPSsupportBtn />
-          <button data-testid="submit-btn" id="submit-btn">Search</button>
+          <button data-testid="submit-btn" id="submit-btn">
+            Search
+          </button>
         </form>
       </div>
-      {searchResults.length > 0 ? <TableHead /> : null}
-      <div className="result" style={{ color: "red" }}>
-        <div className="in-result">
-          <div className="in-result-content">
-            <Results searchResults={searchResults} />
+      {searchResults?.length > 0 ? (
+        <>
+          <TableHead />
+          <div className="result" style={{ color: "red" }}>
+            <div className="in-result">
+              <div className="in-result-content">
+                <Results searchResults={searchResults} />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      ) : null}
     </div>
   );
 }
