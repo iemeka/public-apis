@@ -47,7 +47,9 @@ export default function Form() {
             </div>
           </div>
         </>
-      ) : null}
+      ) : (
+        "loading.."
+      )}
     </div>
   );
 }

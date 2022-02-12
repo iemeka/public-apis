@@ -32,7 +32,7 @@ export default function CategoryDropdown() {
       </label>
       {visibility ? (
         <div className="category-list">
-          {[null, ...categories].map((item) => (
+          {[null, ...(categories || [])].map((item) => (
             <div
               className="category-list-item"
               key={item ?? "all"}
